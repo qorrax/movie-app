@@ -8,7 +8,7 @@ const  MovieList= () => {
 
     useEffect(() => {
 
-        axios.get('https://api.themoviedb.org/3/movie/550?api_key=2a0d2b0b0b0b0b0b0b0b0b0b0b0b0b0b')
+        axios.get('https://api.themoviedb.org/3/movie/550?api_key=14d3b4a12d28d5a2b303a64e680e6cda')
         .then(response => {
             // setMovies(response.data)
 
