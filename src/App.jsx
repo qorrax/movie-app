@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react'
 
 import './App.css'
-import MovieCard from './components/MovieCard'
+import { Container } from 'reactstrap'
 import MovieList from './components/MovieList'
 
 function App() {
@@ -14,8 +14,11 @@ function App() {
       Hello world!
     </h1>
 
-    <MovieCard />
+      <Container>
+    
     <MovieList />
+
+    </Container>
    
 
     </>

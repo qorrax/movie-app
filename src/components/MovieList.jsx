@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import MovieCard from './MovieCard'
+import { Row } from 'reactstrap'
 
 const  MovieList= () => {
 
@@ -24,13 +25,13 @@ const  MovieList= () => {
 
 
   return (
-    <div>
+    <Row>
       <h1> here are movie list </h1>
        {movies.map(function(movie)  {
            return <MovieCard film={movie} />   
            
         })}  
-     </div> 
+     </Row>
   )
 }
 

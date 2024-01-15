@@ -2,6 +2,7 @@
 
 
 import React from 'react';
+import { Col,Card,CardBody, CardTitle, CardSubtitle, CardText, CardLink } from 'reactstrap';
 
 const MovieCard = (props) => {
   
@@ -21,21 +22,31 @@ const MovieCard = (props) => {
     original_title,
     original_title_romanised,
     producer,
-    rt_score,
-    running_time,
-    url,
+    
   } = props.film;
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <h3>{director}</h3>
-      <p>{description}</p>
-      <p>Release Date: {release_date}</p>
-      {/* Add more information as needed */}
-      <img src={image} alt={title} />
-      {/* You can use other data fields as needed */}
-    </div>
+    <Col xs="4">
+        <Card className=' bg-yellow-600'>
+          {/* <img /> */}
+          <CardBody>
+          <CardTitle > Title: {title}</CardTitle>
+          <CardSubtitle> Director: {director}</CardSubtitle>
+          <img src={image} alt={title} />
+          <CardText  className='py-5 bg-blue-300'> Description: {description}</CardText>
+          <CardLink href="#">
+          <p> Producer: {producer}</p>
+          </CardLink>
+          <CardLink href="#">
+          <p>Release Date: {release_date}</p>
+          </CardLink>
+
+          {/* Add more information as needed */}
+      
+          {/* You can use other data fields as needed */}
+          </CardBody>
+        </Card>
+    </Col>
   );
 };
 
